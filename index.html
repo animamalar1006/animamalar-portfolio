@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Animamalar Parthasarathy | Portfolio</title>
+
+    <meta name="description"
+        content="Animamalar Parthasarathy - Computer Science Student Portfolio">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link
+        href="https://fonts.bunny.net/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Dark Mode -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+
+    <style>
+
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+        }
+
+        /* Skill animation */
+        .skill-bar {
+            animation: fillBar 1.5s ease-out;
+        }
+
+        @keyframes fillBar {
+            from {
+                width: 0;
+            }
+        }
+
+        /* Card hover */
+        .project-card {
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+        }
+
+        /* Image fallback */
+        .photo-box {
+            background: linear-gradient(
+                135deg,
+                #7c3aed,
+                #ec4899,
+                #f59e0b
+            );
+        }
+
+    </style>
+</head>
+
+
+<body class="bg-white text-zinc-800 transition-colors duration-300 dark:bg-zinc-950 dark:text-white">
+
+
+    <!-- =========================
+         MAIN CONTAINER
+    ========================== -->
+
+    <div class="mx-auto min-h-screen max-w-6xl px-4 lg:px-8">
+
+
+        <!-- =========================
+             HEADER
+        ========================== -->
+
+        <header class="flex items-center justify-between py-7">
+
+            <!-- Logo -->
+
+            <a href="#"
+                class="text-2xl font-light tracking-widest hover:text-purple-600">
+                Animamalar Parthasarathy
+            </a>
+
+
+            <!-- Navigation -->
+
+            <nav class="hidden items-center gap-6 md:flex">
+
+                <a href="#skills"
+                    class="text-sm font-medium hover:text-purple-600">
+                    Skills
+                </a>
+
+                <a href="#projects"
+                    class="text-sm font-medium hover:text-purple-600">
+                    Projects
+                </a>
+
+                <a href="#education"
+                    class="text-sm font-medium hover:text-purple-600">
+                    Education
+                </a>
+
+                <a href="#contact"
+                    class="text-sm font-medium hover:text-purple-600">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- Dark Mode Button -->
+
+            <button
+                onclick="toggleDarkMode()"
+                class="ml-4 rounded-full p-2 text-xl hover:bg-zinc-100 dark:hover:bg-zinc-800"
+                title="Toggle dark mode">
+
+                <span id="themeIcon">☀️</span>
+
+            </button>
+
+        </header>
+
+
+
+        <!-- =========================
+             HERO SECTION
+        ========================== -->
+
+        <section class="grid grid-cols-1 gap-6 md:grid-cols-2">
+
+
+            <!-- PHOTO -->
+
+            <div class="photo-box flex min-h-[400px] w-full items-center justify-center overflow-hidden rounded-2xl">
+
+    <img
+        src="photo.jpeg"
+        alt="Animamalar Parthasarathy"
+        class="h-full w-full object-cover"
+        onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='flex';"
+    >
+
+    <!-- A icon fallback -->
+    <div
+        id="photoFallback"
+        style="display:none"
+        class="h-full w-full items-center justify-center text-center text-white">
+
+        <div>
+            <div class="mx-auto flex h-32 w-32 items-center justify-center rounded-full bg-white/20 text-5xl font-bold backdrop-blur">
+                A
+            </div>
+
+            <p class="mt-4 text-xl font-semibold">
+                
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+
+            <!-- INTRO -->
+
+            <div
+                class="relative flex min-h-[400px] w-full flex-col overflow-hidden rounded-2xl bg-yellow-100 p-10 dark:bg-yellow-900">
+
+
+                <!-- Background decorations -->
+
+                <div
+                    class="absolute -left-20 -top-20 h-48 w-48 rounded-full bg-yellow-500 blur-3xl">
+                </div>
+
+                <div
+                    class="absolute -right-10 -top-10 h-64 w-64 rounded-full bg-orange-300 blur-3xl">
+                </div>
+
+                <div
+                    class="absolute -bottom-20 left-20 h-48 w-48 rounded-full bg-pink-300 blur-3xl">
+                </div>
+
+
+                <!-- Content -->
+
+                <div class="relative mt-auto">
+
+                    <p
+                        class="mb-3 text-sm font-bold uppercase tracking-widest text-purple-600">
+                        Computer Science Student
+                    </p>
+
+
+                    <h1
+                        class="text-4xl font-bold leading-tight text-black dark:text-white md:text-5xl">
+                        Hi, I'm Animamalar!
+                    </h1>
+
+
+                    <p
+                        class="mt-5 text-base leading-7 text-zinc-800 dark:text-zinc-200">
+
+                        I'm a Computer Science student passionate about
+                        web development, UI/UX and building useful,
+                        user-friendly applications.
+
+                        I enjoy turning ideas into practical digital
+                        solutions and continuously improving my technical
+                        skills.
+
+                    </p>
+
+
+                    <!-- Tags -->
+
+                    <div class="mt-6 flex flex-wrap gap-3">
+
+                        <span class="rounded-full bg-white px-4 py-2 text-sm font-medium text-zinc-800 shadow">
+    HTML
+</span>
+
+<span class="rounded-full bg-white px-4 py-2 text-sm font-medium text-zinc-800 shadow">
+    CSS
+</span>
+
+<span class="rounded-full bg-white px-4 py-2 text-sm font-medium text-zinc-800 shadow">
+    JavaScript
+</span>
+
+<span class="rounded-full bg-white px-4 py-2 text-sm font-medium text-zinc-800 shadow">
+    MongoDB
+</span>
+
+<span class="rounded-full bg-white px-4 py-2 text-sm font-medium text-zinc-800 shadow">
+    Python
+</span>
+
+<span class="rounded-full bg-white px-4 py-2 text-sm font-medium text-zinc-800 shadow">
+    Java
+</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             EDUCATION
+        ========================== -->
+
+        <section
+            id="education"
+            class="mt-6 rounded-2xl bg-zinc-100 p-8 dark:bg-zinc-900">
+
+
+            <h2 class="text-3xl font-bold">
+                Education
+            </h2>
+
+
+            <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                My academic background
+            </p>
+
+
+            <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+
+
+             <!-- Degree -->
+
+                <div
+                    class="rounded-xl bg-white p-6 shadow-sm dark:bg-zinc-800">
+
+                    <span
+                        class="rounded-full bg-purple-100 px-3 py-1 text-xs font-semibold text-purple-700 dark:bg-purple-900 dark:text-purple-300">
+                        Current
+                    </span>
+
+                    <h3 class="mt-4 text-lg font-bold">
+                        B.E. Computer Science
+                    </h3>
+
+                    <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                        SRM Valliammai Engineering College
+                    </p>
+
+                    <p class="mt-3 font-semibold text-purple-600">
+                        CGPA: 8.3 / 10
+                    </p>
+
+                </div>
+
+
+
+                <!-- 12th -->
+
+                <div
+                    class="rounded-xl bg-white p-6 shadow-sm dark:bg-zinc-800">
+
+                    <span
+                        class="rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold text-orange-700">
+                        12th
+                    </span>
+
+                    <h3 class="mt-4 text-lg font-bold">
+                        Higher Secondary Education
+                    </h3>
+
+                    <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                        JRK Global Sr Sec School
+                    </p>
+
+                    <p class="mt-3 font-semibold text-purple-600">
+                        81.6%
+                    </p>
+
+                </div>
+
+
+
+                <!-- 10th -->
+
+                <div
+                    class="rounded-xl bg-white p-6 shadow-sm dark:bg-zinc-800">
+
+                    <span
+                        class="rounded-full bg-pink-100 px-3 py-1 text-xs font-semibold text-pink-700">
+                        10th
+                    </span>
+<h3 class="mt-4 text-lg font-bold">
+                        Higher Secondary Education
+                    </h3>
+
+                    <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                        JRK Global Sr Sec School
+                    </p>
+
+                    <p class="mt-3 font-semibold text-purple-600">
+                        90%
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================
+             PROJECTS
+        ========================== -->
+
+        <section id="projects" class="mt-8">
+
+
+            <h2 class="text-3xl font-bold">
+                My Projects
+            </h2>
+
+
+            <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                Some of the projects I have worked on
+            </p>
+
+
+
+            <div
+                class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+
+                <!-- PROJECT 1 -->
+
+                <div
+                    class="project-card overflow-hidden rounded-2xl bg-zinc-100 p-6 dark:bg-zinc-900">
+
+<h3 class="mt-5 text-lg font-bold">
+                        Quiz Platform
+                    </h3>
+
+                    <p class="mt-1 text-sm font-semibold text-purple-600">
+                        Department Competition Winner
+                    </p>
+
+                    <p class="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+                        An interactive quiz platform designed for
+                        department-level competitions.
+                    </p>
+
+                </div>
+
+
+
+                <!-- PROJECT 2 -->
+
+                <div
+                    class="project-card overflow-hidden rounded-2xl bg-zinc-100 p-6 dark:bg-zinc-900">
+
+<h3 class="mt-5 text-lg font-bold">
+                        Food Delivery System
+                    </h3>
+
+                    <p class="mt-1 text-sm font-semibold text-purple-600">
+                        Web Development Project
+                    </p>
+
+                    <p class="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+                        A modern food delivery website built using
+                        HTML, CSS and JavaScript.
+                    </p>
+
+                </div>
+
+
+
+                <!-- PROJECT 3 -->
+
+                <div
+                    class="project-card overflow-hidden rounded-2xl bg-zinc-100 p-6 dark:bg-zinc-900">
+
+<h3 class="mt-5 text-lg font-bold">
+                        Personal Portfolio
+                    </h3>
+
+                    <p class="mt-1 text-sm font-semibold text-purple-600">
+                        Web Development Project
+                    </p>
+
+                    <p class="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+                        A responsive personal portfolio showcasing
+                        my skills, education and projects.
+                    </p>
+
+                </div>
+
+
+
+                <!-- PROJECT 4 -->
+
+<div
+    class="project-card overflow-hidden rounded-2xl bg-zinc-100 p-6 dark:bg-zinc-900">
+
+<h3 class="mt-5 text-lg font-bold">
+        ChronoUPSC
+    </h3>
+
+    <p class="mt-1 text-sm font-semibold text-purple-600">
+        Interactive Historical Timeline & Revision Platform
+    </p>
+
+    <p class="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+        Built a full-stack web application for visualizing and revising
+        historical events through interactive timelines, chronological
+        quizzes, searchable event data, and revision mode.
+    </p>
+
+</div>
+
+                <!-- PROJECT 5 -->
+
+                <div
+                    class="project-card overflow-hidden rounded-2xl bg-zinc-100 p-6 dark:bg-zinc-900">
+
+<h3 class="mt-5 text-lg font-bold">
+                        Food Delivery System Builder
+                    </h3>
+
+                    <p class="mt-1 text-sm font-semibold text-purple-600">
+                        Web Development Project
+                    </p>
+
+                    <p class="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+                        A practical food ordering system project
+                        created for learning full-stack concepts.
+                    </p>
+
+                </div>
+
+
+
+                <!-- PROJECT 6 -->
+
+                <div
+                    class="project-card overflow-hidden rounded-2xl bg-zinc-100 p-6 dark:bg-zinc-900">
+
+<h3 class="mt-5 text-lg font-bold">
+                        Learning & Interests
+                    </h3>
+
+                    <p class="mt-1 text-sm font-semibold text-purple-600">
+                        Personal Development
+                    </p>
+
+                    <p class="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+                        Exploring web development, UI/UX,
+                        programming and new technologies.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SKILLS
+        ========================== -->
+
+        <section
+            id="skills"
+            class="mt-8 rounded-2xl bg-zinc-100 p-8 dark:bg-zinc-900">
+
+
+            <h2 class="text-3xl font-bold">
+                My Skills
+            </h2>
+
+
+            <p class="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                My current comfort level with the technologies I use.
+            </p>
+
+
+
+            <div class="mt-8 grid grid-cols-1 gap-x-10 gap-y-7 md:grid-cols-2">
+
+
+                <!-- HTML -->
+
+                <div>
+
+                    <div class="mb-2 flex justify-between font-medium">
+
+                        <span>HTML</span>
+
+                        <span>90%</span>
+
+                    </div>
+
+                    <div class="h-3 overflow-hidden rounded-full bg-zinc-300 dark:bg-zinc-700">
+
+                        <div
+                            class="skill-bar h-3 rounded-full bg-purple-600"
+                            style="width:90%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CSS -->
+
+                <div>
+
+                    <div class="mb-2 flex justify-between font-medium">
+
+                        <span>CSS</span>
+
+                        <span>85%</span>
+
+                    </div>
+
+                    <div class="h-3 overflow-hidden rounded-full bg-zinc-300 dark:bg-zinc-700">
+
+                        <div
+                            class="skill-bar h-3 rounded-full bg-purple-600"
+                            style="width:85%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- JavaScript -->
+
+                <div>
+
+                    <div class="mb-2 flex justify-between font-medium">
+
+                        <span>JavaScript</span>
+
+                        <span>80%</span>
+
+                    </div>
+
+                    <div class="h-3 overflow-hidden rounded-full bg-zinc-300 dark:bg-zinc-700">
+
+                        <div
+                            class="skill-bar h-3 rounded-full bg-purple-600"
+                            style="width:80%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- MongoDB -->
+
+                <div>
+
+                    <div class="mb-2 flex justify-between font-medium">
+
+                        <span>MongoDB</span>
+
+                        <span>65%</span>
+
+                    </div>
+
+                    <div class="h-3 overflow-hidden rounded-full bg-zinc-300 dark:bg-zinc-700">
+
+                        <div
+                            class="skill-bar h-3 rounded-full bg-purple-600"
+                            style="width:65%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Python -->
+
+                <div>
+
+                    <div class="mb-2 flex justify-between font-medium">
+
+                        <span>Python</span>
+
+                        <span>70%</span>
+
+                    </div>
+
+                    <div class="h-3 overflow-hidden rounded-full bg-zinc-300 dark:bg-zinc-700">
+
+                        <div
+                            class="skill-bar h-3 rounded-full bg-purple-600"
+                            style="width:70%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Java -->
+
+                <div>
+
+                    <div class="mb-2 flex justify-between font-medium">
+
+                        <span>Java</span>
+
+                        <span>45%</span>
+
+                    </div>
+
+                    <div class="h-3 overflow-hidden rounded-full bg-zinc-300 dark:bg-zinc-700">
+
+                        <div
+                            class="skill-bar h-3 rounded-full bg-purple-600"
+                            style="width:45%">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
+        <section
+            id="contact"
+            class="mt-8 overflow-hidden rounded-2xl bg-purple-100 p-8 dark:bg-purple-950 md:p-12">
+
+
+            <div class="mx-auto max-w-2xl">
+
+
+                <h2 class="text-4xl font-bold">
+                    Let's Connect
+                </h2>
+
+
+                <p class="mt-4 leading-7 text-zinc-700 dark:text-zinc-200">
+
+                    I'm a second-year B.E. Computer Science student at
+                    SRM Valliammai Engineering College with a CGPA of
+                    8.3/10.
+
+                    I'm interested in web development, UI/UX and building
+                    projects that solve real problems.
+
+                </p>
+
+
+
+                <!-- Contact Details -->
+
+                <div class="mt-6 space-y-2 text-sm">
+
+                    <p>
+                        <strong>Email:</strong>
+                        animamalarparthasarathy@gmail.com
+                    </p>
+
+                    <p>
+                        <strong>Phone:</strong>
+                        +91 7305795712
+                    </p>
+
+                    <p>
+                        <strong>LinkedIn:</strong>
+                        <a href="https://www.linkedin.com/in/animamalar-parthasarathy" target="_blank" class="text-purple-600 hover:underline">
+                            LinkedIn Profile
+                        </a>
+                    </p>
+
+                </div>
+
+
+
+                <!-- Contact Form -->
+
+                <form
+                    onsubmit="sendMessage(event)"
+                    class="mt-8 space-y-5">
+
+
+                    <div>
+
+                        <label
+                            for="name"
+                            class="mb-2 block text-sm font-medium">
+                            Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            required
+                            placeholder="Enter your name"
+                            class="w-full rounded-lg border border-white bg-white px-5 py-3 outline-none focus:border-purple-500 dark:border-purple-800 dark:bg-purple-900">
+
+                    </div>
+
+
+
+                    <div>
+
+                        <label
+                            for="email"
+                            class="mb-2 block text-sm font-medium">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            required
+                            placeholder="Enter your email"
+                            class="w-full rounded-lg border border-white bg-white px-5 py-3 outline-none focus:border-purple-500 dark:border-purple-800 dark:bg-purple-900">
+
+                    </div>
+
+
+
+                    <div>
+
+                        <label
+                            for="message"
+                            class="mb-2 block text-sm font-medium">
+                            Message
+                        </label>
+
+                        <textarea
+                            id="message"
+                            rows="5"
+                            required
+                            placeholder="Write your message..."
+                            class="w-full rounded-lg border border-white bg-white px-5 py-3 outline-none focus:border-purple-500 dark:border-purple-800 dark:bg-purple-900"></textarea>
+
+                    </div>
+
+
+
+                    <button
+                        type="submit"
+                        class="rounded-lg bg-purple-700 px-6 py-3 font-semibold text-white transition hover:bg-purple-600">
+
+                        Send Message
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             FOOTER
+        ========================== -->
+
+        <footer
+            class="mt-6 flex flex-col items-center justify-between gap-4 border-t border-zinc-200 py-7 text-center text-sm text-zinc-500 dark:border-zinc-800 md:flex-row md:text-left">
+
+
+            <div>
+
+                <p>
+
+                    <span class="font-semibold">
+                        Animamalar Parthasarathy
+                    </span>
+
+                    © <span id="year"></span>
+
+                </p>
+
+                <p class="mt-1">
+                    Computer Science Student • Web Development • UI/UX
+                </p>
+
+            </div>
+
+
+
+            <div class="flex gap-5">
+
+                <a
+                    href="https://www.linkedin.com/in/animamalar-parthasarathy-8a7901365"
+                    class="hover:text-purple-600"
+                    target="_blank">
+                    LinkedIn
+                </a>
+
+                <a
+                    href="https://github.com/animamalar"
+                    class="hover:text-purple-600"
+                    target="_blank">
+                    GitHub
+                </a>
+
+                <a
+                    href="#"
+                    class="hover:text-purple-600">
+                    Instagram
+                </a>
+
+            </div>
+
+        </footer>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        // Current year
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+
+        // Dark Mode
+        function toggleDarkMode() {
+
+            document.documentElement.classList.toggle("dark");
+
+            const icon = document.getElementById("themeIcon");
+
+            if (document.documentElement.classList.contains("dark")) {
+
+                icon.textContent = "🌙";
+
+            } else {
+
+                icon.textContent = "☀️";
+
+            }
+
+        }
+
+
+        // Contact Form
+        function sendMessage(event) {
+
+            event.preventDefault();
+
+            alert("Thank you! Your message has been received.");
+
+            event.target.reset();
+
+        }
+
+    </script>
+
+</body>
+
+</html>
